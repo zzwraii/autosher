@@ -1,0 +1,286 @@
+<mxfile host="Electron">
+  <diagram name="Страница-1" id="5xVc_a4rItaqCxmJuzF0">
+    <mxGraphModel dx="4362" dy="2123" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1a1a1a;" value="Блок-схема АС «АвтоШер — Каршеринг в Красноярске»" vertex="1">
+          <mxGeometry height="40" width="600" x="500" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="НАЧАЛО&lt;br&gt;Запуск app.py (Flask)" vertex="1">
+          <mxGeometry height="50" width="260" x="620" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="loadIndex" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="GET / → index.html&lt;br&gt;(главная страница)" vertex="1">
+          <mxGeometry height="50" width="260" x="620" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="loadCars" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Загрузка данных&lt;br&gt;GET /api/cars → cars.json&lt;br&gt;(авто + локации + цены)" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="mainMenu" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Главное меню (лендинг)&lt;br&gt;Hero + Авто + Тарифы + Карта + FAQ" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="actionQ" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Выбор действия&lt;br&gt;пользователя" vertex="1">
+          <mxGeometry height="110" width="320" x="590" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="authForm" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="Открытие модального окна&lt;br&gt;«Вход» / «Регистрация»" vertex="1">
+          <mxGeometry height="60" width="240" x="120" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="authQ" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Есть аккаунт?" vertex="1">
+          <mxGeometry height="90" width="240" x="120" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="regNew" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=10;" value="submitRegister()&lt;br&gt;(name, email, pass)&lt;br&gt;localStorage[autosher_users]" vertex="1">
+          <mxGeometry height="80" width="220" x="-140" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="logIn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=10;" value="submitLogin()&lt;br&gt;проверка email + pass&lt;br&gt;localStorage[autosher_users]" vertex="1">
+          <mxGeometry height="80" width="240" x="120" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="saveCurrent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="Сохранение сессии&lt;br&gt;localStorage[autosher_current]" vertex="1">
+          <mxGeometry height="60" width="240" x="120" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="checkAuth" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="checkAuth()&lt;br&gt;переключение UI: guest ↔ auth" vertex="1">
+          <mxGeometry height="60" width="240" x="120" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="filterCars" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=10;" value="Фильтр каталога&lt;br&gt;filterCars(economy/comfort/business/premium)" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="mapInit" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="initMap()&lt;br&gt;Leaflet + CARTO tiles&lt;br&gt;маркеры из locations" vertex="1">
+          <mxGeometry height="70" width="260" x="620" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="popupQ" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Клик по маркеру?" vertex="1">
+          <mxGeometry height="90" width="260" x="620" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="popup" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=10;" value="Открыть попап:&lt;br&gt;название, класс, цена/мин,&lt;br&gt;КПП, топливо" vertex="1">
+          <mxGeometry height="70" width="220" x="920" y="845" as="geometry" />
+        </mxCell>
+        <mxCell id="infoModal" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=10;" value="openInfoModal(car)&lt;br&gt;(характеристики, опции, цены)" vertex="1">
+          <mxGeometry height="70" width="220" x="920" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="bookingBtn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" value="Кнопка «Забронировать»&lt;br&gt;openBooking(car)" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="bookQ" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Пользователь&lt;br&gt;авторизован?" vertex="1">
+          <mxGeometry height="90" width="260" x="620" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="toLogin" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="showToast + openModal(&#39;login&#39;)&lt;br&gt;«Войдите в аккаунт»" vertex="1">
+          <mxGeometry height="60" width="240" x="320" y="1075" as="geometry" />
+        </mxCell>
+        <mxCell id="bookForm" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" value="submitBooking()&lt;br&gt;car + tariff + date" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="createBooking" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" value="createBooking()&lt;br&gt;id = 100000..999999&lt;br&gt;status = confirmed&lt;br&gt;localStorage[autosher_bookings]" vertex="1">
+          <mxGeometry height="80" width="260" x="620" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="dashOpen" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=10;" value="openDashboard(&#39;bookings&#39;)&lt;br&gt;renderBookings()" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="startRideBtn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="Кнопка «Начать поездку»&lt;br&gt;startRide(bookingId)" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="hasActive" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Есть активная&lt;br&gt;поездка?" vertex="1">
+          <mxGeometry height="90" width="260" x="620" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="saveRide" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="localStorage[autosher_active_ride]&lt;br&gt;{bookingId, car, tariff,&lt;br&gt;startedAt, status:&#39;active&#39;}" vertex="1">
+          <mxGeometry height="70" width="240" x="320" y="1605" as="geometry" />
+        </mxCell>
+        <mxCell id="openRide" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="openActiveRide()&lt;br&gt;таймер + стоимость&lt;br&gt;(ridePrices[car] × минуты)" vertex="1">
+          <mxGeometry height="80" width="260" x="620" y="1720" as="geometry" />
+        </mxCell>
+        <mxCell id="rideActions" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=10;" value="Действия в поездке:&lt;br&gt;Закрыть/открыть авто&lt;br&gt;Обновление стоимости" vertex="1">
+          <mxGeometry height="80" width="260" x="620" y="1830" as="geometry" />
+        </mxCell>
+        <mxCell id="finishQ" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Завершить&lt;br&gt;поездку?" vertex="1">
+          <mxGeometry height="90" width="260" x="620" y="1940" as="geometry" />
+        </mxCell>
+        <mxCell id="finishRide" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="finishRide()&lt;br&gt;booking.status=&#39;completed&#39;&lt;br&gt;total = минуты × цена" vertex="1">
+          <mxGeometry height="80" width="260" x="620" y="2060" as="geometry" />
+        </mxCell>
+        <mxCell id="toast" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" value="toast «Поездка завершена — N ₽»&lt;br&gt;возврат в dashboard/историю" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="2170" as="geometry" />
+        </mxCell>
+        <mxCell id="contact" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" value="Форма «Контакты»&lt;br&gt;submitContact()" vertex="1">
+          <mxGeometry height="60" width="240" x="1080" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="toastContact" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" value="toast «Сообщение отправлено»" vertex="1">
+          <mxGeometry height="50" width="240" x="1080" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="adminPanel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;fontSize=11;fontStyle=1;" value="Админ-панель (Roadmap)" vertex="1">
+          <mxGeometry height="60" width="240" x="1121" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="adminCars" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;fontSize=10;" value="Управление автопарком&lt;br&gt;(available/busy/maintenance)" vertex="1">
+          <mxGeometry height="60" width="240" x="1121" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="adminTariff" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;fontSize=10;" value="Управление тарифами&lt;br&gt;(min/hour/day + классы)" vertex="1">
+          <mxGeometry height="60" width="240" x="1121" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="adminUsers" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;fontSize=10;" value="Пользователи / платежи / логи" vertex="1">
+          <mxGeometry height="60" width="240" x="1121" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="КОНЕЦ&lt;br&gt;Возврат на главную" vertex="1">
+          <mxGeometry height="50" width="260" x="620" y="2270" as="geometry" />
+        </mxCell>
+        <mxCell id="blockClasses" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f4ff;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#1a3a5c;" value="БЛОК КЛАССОВ И МЕТОДОВ (Код)" vertex="1">
+          <mxGeometry height="800" width="350" x="-550" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="clsServer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Класс: Flask Server (app.py)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;+ index() : render_template()&lt;br&gt;+ api_cars() : jsonify(cars.json)&lt;br&gt;+ data(filename) : send_file()" vertex="1">
+          <mxGeometry height="100" width="310" x="-530" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAuth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Класс: AuthManager (main.js)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;- currentUser : Object&lt;br&gt;+ checkAuth() : void&lt;br&gt;+ submitRegister(e)&lt;br&gt;+ submitLogin(e)&lt;br&gt;+ logout()" vertex="1">
+          <mxGeometry height="130" width="310" x="-530" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBooking" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Класс: BookingManager&lt;/b&gt;&lt;br&gt;&lt;hr&gt;+ openBooking(car)&lt;br&gt;+ submitBooking(e)&lt;br&gt;+ createBooking(car, tariff, date)&lt;br&gt;+ renderBookings()" vertex="1">
+          <mxGeometry height="120" width="310" x="-530" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRide" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Класс: RideManager&lt;/b&gt;&lt;br&gt;&lt;hr&gt;+ startRide(bookingId)&lt;br&gt;+ openActiveRide()&lt;br&gt;+ updateRideTimer()&lt;br&gt;+ toggleRideLock()&lt;br&gt;+ finishRide()" vertex="1">
+          <mxGeometry height="130" width="310" x="-530" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Класс: MapManager (Leaflet)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;- map : Object&lt;br&gt;- carMarkers : Array&lt;br&gt;+ initMap()&lt;br&gt;+ closeMapPopup()" vertex="1">
+          <mxGeometry height="120" width="310" x="-530" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="blockDB" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5fff5;strokeColor=#82b366;dashed=1;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#1f4a1f;" value="БЛОК БАЗЫ ДАННЫХ (Хранилища)" vertex="1">
+          <mxGeometry height="600" width="350" x="1500" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="dbJson" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Серверное хранилище: cars.json&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• cars : Object (Автопарк)&lt;br&gt;• locations : Array (Координаты)&lt;br&gt;• classes : Array (Классы авто)" vertex="1">
+          <mxGeometry height="120" width="310" x="1520" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="dbLS" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Клиентское хранилище: localStorage&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• autosher_users : Array&lt;br&gt;• autosher_current : Object&lt;br&gt;• autosher_bookings : Array&lt;br&gt;• autosher_active_ride : Object" vertex="1">
+          <mxGeometry height="130" width="310" x="1520" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="dbMethods" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;align=left;verticalAlign=top;fontSize=11;spacingLeft=6;spacingTop=4;" value="&lt;b&gt;Методы работы с БД (main.js)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;+ getDB(key) : JSON&lt;br&gt;+ setDB(key, data) : void" vertex="1">
+          <mxGeometry height="100" width="310" x="1520" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="loadIndex">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" edge="1" parent="1" source="loadIndex" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="loadCars">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" edge="1" parent="1" source="loadCars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="mainMenu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" edge="1" parent="1" source="mainMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="actionQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" edge="1" parent="1" source="actionQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="authForm" value="Вход/Регистрация">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l6" edge="1" parent="1" source="authForm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="authQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7" edge="1" parent="1" source="authQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="regNew" value="Нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l8" edge="1" parent="1" source="regNew" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="saveCurrent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l9" edge="1" parent="1" source="authQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="logIn" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l10" edge="1" parent="1" source="logIn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="saveCurrent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l11" edge="1" parent="1" source="saveCurrent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="checkAuth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l12" edge="1" parent="1" source="checkAuth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" target="actionQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l13" edge="1" parent="1" source="actionQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="filterCars" value="Каталог/Карта">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l14" edge="1" parent="1" source="filterCars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="mapInit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l15" edge="1" parent="1" source="mapInit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="popupQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l16" edge="1" parent="1" source="popupQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="popup" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l17" edge="1" parent="1" source="popup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#999999;dashed=1;" target="infoModal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l18" edge="1" parent="1" source="popup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="bookingBtn" value="Кнопка брони">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l19" edge="1" parent="1" source="infoModal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="bookingBtn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l20" edge="1" parent="1" source="bookingBtn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="bookQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l21" edge="1" parent="1" source="bookQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="toLogin" value="Нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l22" edge="1" parent="1" source="bookQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="bookForm" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l23" edge="1" parent="1" source="bookForm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="createBooking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l24" edge="1" parent="1" source="createBooking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="dashOpen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l25" edge="1" parent="1" source="dashOpen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="startRideBtn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l26" edge="1" parent="1" source="startRideBtn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="hasActive">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l27" edge="1" parent="1" source="hasActive" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="saveRide" value="Нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l28" edge="1" parent="1" source="saveRide" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="openRide">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l29" edge="1" parent="1" source="hasActive" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="openRide" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l30" edge="1" parent="1" source="openRide" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="rideActions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l31" edge="1" parent="1" source="rideActions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="finishQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l32" edge="1" parent="1" source="finishQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="openRide" value="Нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l33" edge="1" parent="1" source="finishQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="finishRide" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l34" edge="1" parent="1" source="finishRide" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="toast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l35" edge="1" parent="1" source="toast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l36" edge="1" parent="1" source="actionQ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;fontSize=10;" target="contact" value="Контакты">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l37" edge="1" parent="1" source="contact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" target="toastContact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l38" edge="1" parent="1" source="toastContact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=1;strokeColor=#999999;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l39" edge="1" parent="1" source="adminPanel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=1;strokeColor=#999999;" target="adminCars">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l40" edge="1" parent="1" source="adminCars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=1;strokeColor=#999999;" target="adminTariff">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l41" edge="1" parent="1" source="adminTariff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=1;strokeColor=#999999;" target="adminUsers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="newLink1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endFill=0;dashed=1;strokeColor=#999999;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="clsServer" value="Исполняется">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="newLink2" edge="1" parent="1" source="loadCars" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endFill=0;dashed=1;strokeColor=#999999;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="dbJson" value="Чтение БД">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="newLink3" edge="1" parent="1" source="saveCurrent" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endFill=0;dashed=1;strokeColor=#999999;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="dbLS" value="Запись БД">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
